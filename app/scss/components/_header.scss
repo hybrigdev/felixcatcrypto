@@ -1,19 +1,48 @@
+@use '../util' as u;
+
 header {
     position: fixed;
     width: 100%;
-    display: flex;
+    height: 100px;
+    font-family: u.$header-font;
     justify-content: space-between;
-    background-color: blue;
+    z-index: 1000;
 
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 1rem;
-        background-color: #333;
+        background: var(--glass-bg-color);
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+        margin-inline: auto;
+        height: 100%;
+        max-width: 1040px;
+        border-radius: u.$border-radius;
+        border: u.$border;
+
+        .logo-img {
+            width: clamp(2.5rem, 3.75rem + 1vw, 6.25rem);
+            height: auto;
+        }
 
 
-        color: var(--white);
+
     }
     
+}
+
+nav ul {
+    display: flex;
+    gap: 1.875rem;
+
+    li {
+        font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+
+        a {
+            text-decoration: none;
+            color: var(--white);
+        }
+    }
 }

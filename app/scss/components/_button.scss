@@ -1,0 +1,39 @@
+@use '../util' as u;
+
+button {
+    background-color: var(--yellow);
+    font-size: 1rem;
+    font-family: u.$header-font;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--button-hover);
+        transition: background-color 0.3s ease;
+    }
+}
+
+.mini-btn {
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    right: 15rem;
+    transform: translateY(-50%);
+
+    a {
+        color: var(--black);
+    }
+}
+
+.big-btn {
+    padding: 1rem 1.5rem;
+    border-radius: 0 40px 40px;
+    font-family: u.$body-font;
+    line-height: 1.4;
+
+    span {
+        font-weight: bold;
+        font-size: 1.15rem;
+    }
+}

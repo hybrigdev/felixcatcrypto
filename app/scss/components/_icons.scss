@@ -10,12 +10,17 @@
     display: flex;
     justify-content: space-between;
     gap: 2.5rem;
+
+    img {
+    width: clamp(5rem, 7rem + 1vw, 12.5rem);
+    }
 }
 
 .link-icon {
-    width: 12.5rem;
     border-radius: 50%;
 }
+
+
 
 .powered-by-sol img {
     width: 37.5rem;
