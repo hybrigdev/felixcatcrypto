@@ -1,0 +1,29 @@
+:root {
+    --black: #000;
+    --white: #FFF;
+    --yellow: #FF9313;
+    --light-yellow: #FFA942;
+    --green: #52D48E;
+    --light-green: #B3F8D4;
+    --green-v2: #6AFF9D;
+    --light-green-v2: #A7FFC5;
+    --milk-white: #E8E8E8;
+
+    --background-color: var(--black);
+    --text-color: var(--black);
+    --card-color: var(--white);
+    --copyright-color: #713F03;
+    --copy-btn-color: #FFDFB9;
+
+
+    --glass-bg-color: linear-gradient(150deg, rgba(75, 75, 75, 0.5) 0%, rgba(75, 75, 75, 0.2) 100%);
+    --glass-stroke-color: rgba(248, 248, 248, 1);
+
+    --btn-bg-color: var(--yellow);
+
+    --iframe-bg-color: radial-gradient(50% 50% at 50% 50%, var(--green) 0%, var(--light-green) 100%);
+    --tokenomics-bg-color: linear-gradient(90deg, var(--green-v2) 0%, var(--light-green-v2) 100%);
+    --footer-bg-color: linear-gradient(90deg, var(--yellow) 0%, var(--light-yellow) 100%);
+}
+
+$tokenomics-bg-color: linear-gradient(90deg, var(--green-v2) 0%, var(--light-green-v2) 100%);

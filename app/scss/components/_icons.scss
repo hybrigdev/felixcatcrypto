@@ -1,0 +1,22 @@
+.social-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.75rem;
+}
+
+.link-icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+}
+
+.link-icon {
+    width: 12.5rem;
+    border-radius: 50%;
+}
+
+.powered-by-sol img {
+    width: 37.5rem;
+}

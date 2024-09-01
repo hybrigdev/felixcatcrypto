@@ -1,0 +1,31 @@
+@use "../util/" as u;
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 0;
+    font-family: u.$header-font;
+}
+
+h1 {
+    // font-size: clamp(30px, 16px + 2vw, 64px);
+    font-size: clamp(1.875rem, 1rem + 2vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 0.875rem + 1.5vw, 2.5rem);
+}
+
+p {
+    margin-top: 0;
+    font-size: 1rem;
+
+}
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

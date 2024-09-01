@@ -1,0 +1,79 @@
+<header class="primary-header" id="home">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#"><img src="./assets/images/logo.png" alt="$FLXCAT logo" class="logo-img"></a>
+                <div class="button-et-menu">
+                    <a href="https://pump.fun/7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump" target="_blank">
+                        <button class="button-nav">Buy $FLXCAT</button>
+                    </a>
+
+                    <input id="menu-toggle" type="checkbox" />
+                    <label class='menu-button-container' for="menu-toggle">
+                        <div class='menu-button'></div>
+                    </label>
+                    <nav class="primary-navigation">
+                        <a href="#"><img src="./assets/images/logo.png" alt="$FLXCAT logo" class="logo-img"></a>
+                        <ul role="list" class="nav-list" id="primary-navigation">
+                            <li><a href="https://pump.fun/7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump" target="_blank">Pump.fun</a></li>
+                            <li><a href="https://birdeye.so/token/7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump/9yWCbkgg3yfNYmPWKUHfpBLtDixS6oUHfhFPQUeqQDs7?chain=solana">Birdeye</a></li>
+                            <li><a href="https://solscan.io/token/7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump" target="_blank">Solscan</a></li>
+                            <li><a href="https://t.me/+JXd6SFxf_kVjZmFh">Community</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="subtitle-text">
+                <h1>...is Back and Better Than Ever!</h1>
+            </div>
+            <div class="video-container">
+                <video autoplay loop playsinline id="hero-video">
+                    <source src="./assets/videos/felix-the-cat.mp4" type="video/mp4">
+                    <!-- Your browser does not support the video tag. -->
+                </video>
+                <button id="mute-button" class="mute-button" aria-label="Mute/Unmute">
+                    <span id="mute-icon">🔊</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="block1">
+            <div class="block1-links">
+                <a href="https://x.com/FelixCatCrypto" class="link"><img src="./assets/icons/x.png" alt="" class="link-icon"></a>
+                <a href="https://t.me/+JXd6SFxf_kVjZmFh" class="link"><img src="./assets/icons/telegram.png" alt="" class="link-icon"></a>
+                <a href="https://pump.fun/7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump" class="link"><img src="./assets/icons/pumpfun.png" alt="" class="link-icon"></a>
+                <a href="https://solscan.io/token/7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump" class="link"><img src="./assets/icons/solscan.png" alt="" class="link-icon"></a>
+                <a href="https://birdeye.so/token/7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump/9yWCbkgg3yfNYmPWKUHfpBLtDixS6oUHfhFPQUeqQDs7?chain=solana" class="link"><img src="./assets/icons/birdeye.png" alt="" class="link-icon"></a>
+            </div>
+            <img src="./assets/images/powered-by-solana.png" alt="" class="powered-by-solana">
+        </div>
+
+        <div class="block2">
+            <div class="container">
+                <div class="block2-text">
+                    <h2>What is $FLXCAT?</h2>
+                    <p>$FLXCAT is a community-driven, decentralized cryptocurrency that is built on the Solana blockchain. It is a deflationary token that rewards holders with a 2% transaction fee on every buy or sell. The $FLXCAT token is a tribute to the iconic Felix the Cat, a character that has been around for nearly a century, and now, he is on the solana blockchain.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="block3">
+            <span class="text">
+                <p>A Century of Mischief, Now on the Blockchain!</p>
+            </span>
+        </div>
+
+        <div class="block4">
+            <iframe src="https://pump.fun/7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump" width="700px" height="500px" style="border:none;"></iframe>
+
+            <span class="text">
+                <p>it’s the dawn of a new era…</p>
+            </span>
+        </div>
+    </main>
+    <footer>
+        <a href="#home">$FLXCAT</a>
+        <a href="https://t.me/hybrigdev">Developed by Hybrig</a>
+        <a href="https://x.com/FelixCatCrypto" class="link"><img src="./assets/icons/x.png" alt="" class="link-icon"></a>
+    </footer>
