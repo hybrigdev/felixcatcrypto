@@ -24,6 +24,10 @@ button {
     a {
         color: var(--black);
     }
+
+    @media (max-width: 1488px) {
+        display: none;
+    }
 }
 
 .big-btn {
