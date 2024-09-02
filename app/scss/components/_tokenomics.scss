@@ -1,0 +1,81 @@
+@use "../util/" as u;
+
+.tokenomics {
+    position: relative;
+    margin-top: 2rem;
+    // max-width: 1404px;
+    // width: min(100%, 1404px);
+    // height: 478px;
+    // margin-inline: auto;
+
+    // @include u.breakpoint(large) {
+    //     // grid-template-columns: 2fr 1fr;
+    //     // grid-template-rows: 1fr;
+    // }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .left-col, .right-col {
+        border-radius: 30px;
+    }
+
+    .left-col {
+        background: var(--tokenomics-bg-color);
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
+        text-align: left;
+        padding: 36px 72px 24px 40px;
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                padding-bottom: 0.875rem;
+                margin-bottom: 1.5rem;
+                list-style-type: disc;
+                border-bottom: 1px solid var(--black);
+            }
+        }
+
+
+        img {
+            max-width: 9rem;
+            width: 6rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .right-col {
+        background: var(--milk-white);
+        padding: 18px;
+        // height: 50vh;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

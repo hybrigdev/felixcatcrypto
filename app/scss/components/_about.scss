@@ -1,3 +1,30 @@
 .about {
-    display: none;
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+
+    .container {
+        height: 60vh;
+        border-radius: 20px;
+
+        background: var(--milk-white);
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        text-align: center;
+
+        img {
+            width: 80vw;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: none;
+        }
+    }
 }

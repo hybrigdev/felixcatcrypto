@@ -20,7 +20,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
     }
 
     ul {
@@ -50,6 +50,8 @@
 
 .slide-2 {
     animation: scroll 40s linear infinite;
+    animation-direction: reverse;
+
 }
 
 // @keyframes scroll {
