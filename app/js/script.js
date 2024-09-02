@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('.navbar');
+    const nav = document.querySelector('nav ul');
+  
+    menuToggle.addEventListener('change', function() {
+      if (this.checked) {
+        navbar.classList.add('active');
+        nav.classList.add('active');
+      } else {
+        navbar.classList.remove('active');
+        nav.classList.remove('active');
+      }
+    });
+  
+    document.addEventListener('click', function(event) {
+      // Check if click is outside of the menu and the navbar
+      if (!navbar.contains(event.target) && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
+        menuToggle.checked = false; // Uncheck the menu toggle
+        navbar.classList.remove('active');
+        nav.classList.remove('active');
+      }
+    });
+  });
+  
+  
+
+document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('hero-video');
     const muteButton = document.getElementById('mute-button');
     const muteIcon = document.getElementById('mute-icon');

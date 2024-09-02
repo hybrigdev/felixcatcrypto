@@ -10,7 +10,7 @@
     align-items: center;
     z-index: 1000;
 
-    @include u.breakpoint(large) {
+    @include u.breakpoint(xlarge) {
         display: none;
     }
   }
@@ -55,14 +55,22 @@
     transform: rotate(-405deg);
   }
 
-  #menu-toggle ~ nav {
-    display: flex;
-    right: -450px;
-    transition: right .3s ease;
-  }
+  // #menu-toggle:checked ~ .navbar {
+  //   // display: flex;
+  //   height: 500px;
+  //   transition: height .3s ease;
+  // }
+
+  // #menu-toggle ~ .navbar {
+  //   // display: flex;
+  //   height: 100%;
+  //   transition: height .3s ease;
+  // }
   
-  #menu-toggle:checked ~ nav {
-    display: flex;
-    right: 0;
-    transition: right .3s ease;
-  }
+  // #menu-toggle ~ nav {
+  //   display: flex;
+  // }
+  
+  // #menu-toggle:checked ~ nav {
+  //   display: none;
+  // }

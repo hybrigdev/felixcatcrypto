@@ -3,39 +3,61 @@
 header {
     position: fixed;
     width: 100%;
-    height: 100px;
+    height: 80px;
     font-family: u.$header-font;
-    justify-content: space-between;
+    justify-content: center;
     z-index: 1000;
+    display: flex;
+    // align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
+    @include u.breakpoint('large') {
+        height: 100px;
+    }
+
+    .navbar {
+        height: 100%;
+        width: 95vw;
+        min-width: 300px;
+        max-width: 1040px;
         background: var(--glass-bg-color);
         backdrop-filter: blur(20px);
-        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-        margin-inline: auto;
-        height: 100%;
-        max-width: 1040px;
-        border-radius: u.$border-radius;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);border-radius: u.$border-radius;
         border: u.$border;
+        transition: height .3s ease;
+        position: relative;
 
-        .logo-img {
-            width: clamp(2.5rem, 3.75rem + 1vw, 6.25rem);
-            height: auto;
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            position: absolute;
+            width: 100%;
+            height: 80px;
+
+            @include u.breakpoint('large') {
+                height: 100px;
+            }
+
+            .logo-img {
+                width: clamp(2.5rem, 3.75rem + 1vw, 6.25rem);
+                height: auto;
+            }
         }
-
-
 
     }
     
 }
 
+.navbar.active {
+    height: 500px;
+    background: var(--glass-bg-color-mobile);
+}
+
 nav ul {
-    display: flex;
-    gap: 1.875rem;
+    display: none;
 
     li {
         font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
@@ -45,4 +67,22 @@ nav ul {
             color: var(--white);
         }
     }
+
+    @include u.breakpoint('xlarge') {
+        display: flex;
+        flex-direction: row;
+        gap: 1.875rem;
+    }
+}
+
+nav ul.active {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding: 0;
 }

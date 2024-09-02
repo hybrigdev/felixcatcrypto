@@ -16,28 +16,4 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 0;
-
-    .development {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: black;
-        color: white;
-        z-index: 11000;            
-        height: 1000%;
-        min-width: 1000%;
-    }
-
-    @media (max-width: 768px) {
-        .development {
-            display: block;
-            p {
-                font-size: 1.5rem;
-                padding: 1rem;
-                margin-inline: auto;
-                margin-top: 100px;
-            }
-        }
-    }
 }
