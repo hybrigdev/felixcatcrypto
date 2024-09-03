@@ -2,26 +2,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const navbar = document.querySelector('.navbar');
     const nav = document.querySelector('nav ul');
+    const navLinks = nav.querySelectorAll('a');
+
+    function closeNavbar() {
+      menuToggle.checked = false;
+      navbar.classList.remove('active');
+      nav.classList.remove('active');
+  }
   
     menuToggle.addEventListener('change', function() {
       if (this.checked) {
         navbar.classList.add('active');
         nav.classList.add('active');
       } else {
-        navbar.classList.remove('active');
-        nav.classList.remove('active');
+          closeNavbar();
       }
     });
   
     document.addEventListener('click', function(event) {
-      // Check if click is outside of the menu and the navbar
       if (!navbar.contains(event.target) && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
-        menuToggle.checked = false; // Uncheck the menu toggle
-        navbar.classList.remove('active');
-        nav.classList.remove('active');
+        closeNavbar();
       }
     });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeNavbar);
   });
+});
   
 document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("hero-video");

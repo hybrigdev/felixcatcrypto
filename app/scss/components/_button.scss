@@ -40,8 +40,10 @@ button {
     font-family: u.$body-font;
     line-height: 1.4;
     white-space: normal;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
 
     span {
+        font-family: 'Courier New', Courier, monospace;
         font-weight: bold;
         font-size: 1.15rem;
     }
