@@ -14,7 +14,7 @@
             gap: 1rem;
         width: 100%;
 
-        @include u.breakpoint(large) {
+        @include u.breakpoint(xlarge) {
             flex-direction: row;
         }
     }

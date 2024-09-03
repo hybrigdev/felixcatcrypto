@@ -13,7 +13,7 @@ header {
     padding: 0 2rem;
 
     @include u.breakpoint('large') {
-        height: 100px;
+        height: 80px;
     }
 
     .navbar {
@@ -39,7 +39,7 @@ header {
             height: 100px;
 
             @include u.breakpoint('large') {
-                height: 100px;
+                height: 80px;
             }
 
             .logo-img {
@@ -61,7 +61,16 @@ nav ul {
     display: none;
 
     li {
-        font-size: clamp(1.5rem, 1rem + 1vw, 1.5rem);
+        font-size: 1rem;
+        border-bottom: 1px solid var(--white);
+        padding-bottom: .51rem;
+        width: 40%;
+        text-align: center;
+
+        @include u.breakpoint('xlarge') {
+            width: auto;
+            border: 0;
+        }
 
         a {
             text-decoration: none;
