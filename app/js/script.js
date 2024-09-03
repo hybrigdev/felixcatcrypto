@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.getElementById('copyButton').addEventListener('click', function() {
-    const textToCopy = "7gSp6WfWAcoikhbtBPNaVSH2A3b9oLm1CjGGH2Papump";
+    const textToCopy = "Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump";
     const defaultText = copyButton.textContent;
   
     const tempTextArea = document.createElement('textarea');

@@ -14,7 +14,7 @@
 
 .link-icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 1rem;
     width: 100%;
 
@@ -27,6 +27,15 @@
 
 .link-icon {
     border-radius: 50%;
+}
+
+.link-icons .small {
+    width: 100px;
+    background-color: red;
+}
+
+.link-icons img {
+    width: 5vw;
 }
 
 
