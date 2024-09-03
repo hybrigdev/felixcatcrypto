@@ -62,9 +62,9 @@ nav ul {
 
     li {
         font-size: 1rem;
-        border-bottom: 1px solid var(--white);
-        padding-bottom: .51rem;
-        width: 40%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: .25rem;
+        // width: 40%;
         text-align: center;
 
         @include u.breakpoint('xlarge') {
