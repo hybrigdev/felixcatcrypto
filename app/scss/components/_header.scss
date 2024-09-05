@@ -80,6 +80,7 @@ nav ul {
 
     @include u.breakpoint('xlarge') {
         display: flex;
+        align-items: center;
         flex-direction: row;
         gap: 1.875rem;
     }

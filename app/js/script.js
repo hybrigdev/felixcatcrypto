@@ -59,24 +59,41 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.getElementById('copyButton').addEventListener('click', function() {
-    const textToCopy = "Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump";
-    const defaultText = copyButton.textContent;
-  
-    const tempTextArea = document.createElement('textarea');
-    tempTextArea.value = textToCopy;
-    document.body.appendChild(tempTextArea);
+  copyToClipboard('Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump', 'copyButton');
+});
 
-    tempTextArea.select();
-    tempTextArea.setSelectionRange(0, 99999); 
-  
-    document.execCommand('copy');
-  
-    document.body.removeChild(tempTextArea);
-  
-    copyButton.textContent = 'Copied!';
-    setTimeout(() => {
+document.getElementById('copyButton2').addEventListener('click', function() {
+  copyToClipboard('Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump', 'copyButton2');
+});
+
+function copyToClipboard(textToCopy, buttonId) {
+  const copyButton = document.getElementById(buttonId);
+  const defaultText = copyButton.textContent;
+
+  const tempTextArea = document.createElement('textarea');
+  tempTextArea.value = textToCopy;
+  document.body.appendChild(tempTextArea);
+
+  tempTextArea.select();
+  tempTextArea.setSelectionRange(0, 99999);
+
+  document.execCommand('copy');
+
+  document.body.removeChild(tempTextArea);
+
+  copyButton.textContent = 'CA Copied Successfully!';
+  setTimeout(() => {
       copyButton.textContent = defaultText;
-    }, 2000);
-  });
-  
-  
+  }, 2000);
+}
+
+// window.Jupiter.init({
+//   displayMode: "integrated",
+//   integratedTargetId: "integrated-terminal",
+//   endpoint: "https://api.mainnet-beta.solana.com",
+//   formProps: {
+//     initialInputMint: "So11111111111111111111111111111111111111112",
+//     initialOutputMint: "Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump",
+//     initialSlippageBps: 5,
+//   },
+// });
