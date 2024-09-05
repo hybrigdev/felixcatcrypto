@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
 document.addEventListener("DOMContentLoaded", function () {
   const video = document.getElementById("hero-video");
+  video.play();
 
   video.addEventListener("click", function () {
       if (video.paused) {
