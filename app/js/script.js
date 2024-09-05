@@ -35,10 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
   video.play();
 
   video.addEventListener("click", function () {
-      if (video.paused) {
-          video.play();
-      } else {
+      if (video.play) {
           video.pause();
+      } else {
+          video.play();
       }
     });
 });  
