@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #d8d8d8;
     color: var(--black);
     display: flex;
@@ -12,10 +12,12 @@
     z-index: 9999;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
+    position: relative;
 
     h1 {
         font-size: 4.5rem;
-      animation: scale 2s infinite alternate-reverse;
+    z-index: 9999;
+    animation: scale 2s infinite alternate-reverse;
     }
 
       button {
@@ -28,7 +30,9 @@
       border-radius: 50px;
       margin-top: 30px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-      transition: box-shadow 0.3s ease;
+      position: relative;
+    z-index: 2;
+    transition: box-shadow 0.3s ease;
 
       &:hover {
         box-shadow: 0 0 20px rgba(255, 255, 255, 1);
@@ -47,6 +51,7 @@
     opacity: 0.1;
     height: auto;
     animation: bounce 2s infinite;
+    z-index: 1;
   }
 
 @keyframes bounce {
