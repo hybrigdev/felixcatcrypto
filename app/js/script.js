@@ -1,3 +1,11 @@
+window.onload = function() {
+  const audio = document.getElementById('bg-audio');
+  audio.play();
+  setTimeout(() => {
+    audio.muted = false;
+  }, 1000);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const navbar = document.querySelector('.navbar');
