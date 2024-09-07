@@ -26,3 +26,9 @@ section {
 .bold {
     font-weight: 700;
 }
+
+#main-content {
+    display: none;
+    animation: fadeIn 2s ease-in-out;
+
+}
