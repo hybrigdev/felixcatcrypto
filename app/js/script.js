@@ -1,10 +1,17 @@
-window.onload = function() {
+// window.onload = function() {
+//   const audio = document.getElementById('bg-audio');
+//   audio.play();
+//   setTimeout(() => {
+//     audio.muted = false;
+//   }, 1000);
+// }
+
+window.addEventListener('load', function() {
   const audio = document.getElementById('bg-audio');
-  audio.play();
-  setTimeout(() => {
-    audio.muted = false;
-  }, 1000);
-}
+  audio.play().catch(error => {
+    console.log('Autoplay was prevented:', error);
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
