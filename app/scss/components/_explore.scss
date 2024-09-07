@@ -41,9 +41,10 @@
 #felix {
     position: absolute;
     left: 0;
-    top: 0;
-    margin: 40rem 10rem 5rem;
-    width: 200px;
+    top: 20;
+    // margin: 40rem 10rem 5rem;
+    width: 50rem;
+    opacity: 0.1;
     height: auto;
     animation: bounce 2s infinite;
   }
