@@ -14,6 +14,19 @@
 //   }, 1000);  // Wait for the slide-up animation to finish
 // });
 
+function playAudioOnScroll() {
+  var audio = document.getElementById("bg-audio");
+  
+  if (audio.paused) {
+      audio.play();
+  }
+}
+
+// Attach scroll event listener
+window.onscroll = function() {
+  playAudioOnScroll();
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
     const navbar = document.querySelector('.navbar');
@@ -46,34 +59,34 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
   
-document.addEventListener("DOMContentLoaded", function () {
-  const video = document.getElementById("hero-video");
-  video.play();
+// document.addEventListener("DOMContentLoaded", function () {
+//   const video = document.getElementById("hero-video");
+//   video.play();
 
-  video.addEventListener("click", function () {
-      if (video.play) {
-          video.pause();
-      } else {
-          video.play();
-      }
-    });
-});  
+//   video.addEventListener("click", function () {
+//       if (video.play) {
+//           video.pause();
+//       } else {
+//           video.play();
+//       }
+//     });
+// });  
 
-document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('hero-video');
-    const muteButton = document.getElementById('mute-button');
-    const muteIcon = document.getElementById('mute-icon');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const video = document.getElementById('hero-video');
+//     const muteButton = document.getElementById('mute-button');
+//     const muteIcon = document.getElementById('mute-icon');
 
-    muteButton.addEventListener('click', function() {
-        if (video.muted) {
-            video.muted = false;
-            muteIcon.textContent = '🔊'; // Unmuted icon
-        } else {
-            video.muted = true;
-            muteIcon.textContent = '🔇'; // Muted icon
-        }
-    });
-});
+//     muteButton.addEventListener('click', function() {
+//         if (video.muted) {
+//             video.muted = false;
+//             muteIcon.textContent = '🔊'; // Unmuted icon
+//         } else {
+//             video.muted = true;
+//             muteIcon.textContent = '🔇'; // Muted icon
+//         }
+//     });
+// });
 
 document.getElementById('copyButton').addEventListener('click', function() {
   copyToClipboard('Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump', 'copyButton');
