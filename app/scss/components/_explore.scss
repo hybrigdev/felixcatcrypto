@@ -1,162 +1,158 @@
-#explore-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #d8d8d8;
-    color: var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    text-align: center;
-    animation: fadeIn 2s ease-in-out;
-    overflow: hidden;
+// #explore-screen {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: #d8d8d8;
+//     color: var(--black);
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 9999;
+//     text-align: center;
+//     animation: fadeIn 2s ease-in-out;
+//     overflow: hidden;
 
-    .explore {
-        position: relative;
+//     .explore {
+//         position: relative;
 
-        h1 {
-            font-size: 4.5rem;
-        z-index: 9999;
-        animation: scale 2s infinite alternate-reverse;
-        }
+//         h1 {
+//             font-size: 4.5rem;
+//         z-index: 9999;
+//         animation: scale 2s infinite alternate-reverse;
+//         }
     
-          button {
-            padding: 15px 30px;
-          font-size: 1.5rem;
-          background-color: #f7931e;
-          color: white;
-          border: none;
-          cursor: pointer;
-          border-radius: 50px;
-          margin-top: 30px;
-          box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-          position: relative;
-        z-index: 2;
-        transition: box-shadow 0.3s ease;
+//           button {
+//             padding: 1rem 1.5rem;
+//           font-size: 1.5rem;
+//           color: white;
+//           margin-top: 30px;
+//           box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+//           position: relative;
+//         z-index: 2;
+//         transition: box-shadow 0.3s ease;
     
-          &:hover {
-            box-shadow: 0 0 20px rgba(255, 255, 255, 1);
-            transform: scale(1.1);
-            transition: all 0.5s ease;
-          }
-      }
-    }
+//           &:hover {
+//             box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+//             transform: scale(1.1);
+//             transition: all 0.5s ease;
+//           }
+//       }
+//     }
 
-}
+// }
 
-#felix {
-    position: absolute;
-    left: 0;
-    top: 20;
-    // margin: 40rem 10rem 5rem;
-    width: 50rem;
-    opacity: 0.1;
-    height: auto;
-    animation: bounce 2s infinite;
-    z-index: 1;
-  }
+// #felix {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     // margin: 10rem 15rem 0 0;
+//     width: 50rem;
+//     opacity: 0.1;
+//     height: auto;
+//     animation: bounce 2s infinite;
+//     z-index: 1;
+//   }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
+// @keyframes bounce {
+//     0%, 20%, 50%, 80%, 100% {
+//       transform: translateY(0);
+//     }
+//     40% {
+//       transform: translateY(-30px);
+//     }
+//     60% {
+//       transform: translateY(-15px);
+//     }
+//   }
 
-  /* Fade in the explore screen */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+//   /* Fade in the explore screen */
+//   @keyframes fadeIn {
+//     from {
+//       opacity: 0;
+//     }
+//     to {
+//       opacity: 1;
+//     }
+//   }
 
-  @keyframes scale {
-    from {
-      transform: scale(0.8);
-    }
-    to {
-      transform: scale(1);
-    }
-  }
+//   @keyframes scale {
+//     from {
+//       transform: scale(0.8);
+//     }
+//     to {
+//       transform: scale(1);
+//     }
+//   }
 
-  /* Slide up transition when the screen disappears */
-  @keyframes slideUp {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-100%);
-    }
-  }
+//   /* Slide up transition when the screen disappears */
+//   @keyframes slideUp {
+//     from {
+//       transform: translateY(0);
+//     }
+//     to {
+//       transform: translateY(-100%);
+//     }
+//   }
 
-   /* Circles for animated background effect */
-   .circle {
-    position: absolute;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    animation: float 10s infinite;
-    opacity: 0;
-  }
+//    /* Circles for animated background effect */
+//    .circle {
+//     position: absolute;
+//     border-radius: 50%;
+//     background-color: rgba(255, 255, 255, 0.5);
+//     animation: float 10s infinite;
+//     opacity: 0;
+//   }
 
-  /* Different circle sizes */
-  .circle.small {
-    width: 50px;
-    height: 50px;
-  }
-  .circle.medium {
-    width: 100px;
-    height: 100px;
-  }
-  .circle.large {
-    width: 150px;
-    height: 150px;
-  }
+//   /* Different circle sizes */
+//   .circle.small {
+//     width: 50px;
+//     height: 50px;
+//   }
+//   .circle.medium {
+//     width: 100px;
+//     height: 100px;
+//   }
+//   .circle.large {
+//     width: 150px;
+//     height: 150px;
+//   }
 
-  /* Floating animation for the circles */
-  @keyframes float {
-    0% {
-      transform: translateY(0) scale(1);
-      opacity: 0.3;
-    }
-    50% {
-      transform: translateY(-50px) scale(1.1);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(0) scale(1);
-      opacity: 0.3;
-    }
-  }
+//   /* Floating animation for the circles */
+//   @keyframes float {
+//     0% {
+//       transform: translateY(0) scale(1);
+//       opacity: 0.3;
+//     }
+//     50% {
+//       transform: translateY(-50px) scale(1.1);
+//       opacity: 1;
+//     }
+//     100% {
+//       transform: translateY(0) scale(1);
+//       opacity: 0.3;
+//     }
+//   }
 
-  /* Randomly placing circles */
-  .circle:nth-child(1) {
-    top: 10%;
-    left: 20%;
-    animation-duration: 8s;
-  }
-  .circle:nth-child(2) {
-    top: 50%;
-    left: 10%;
-    animation-duration: 12s;
-  }
-  .circle:nth-child(3) {
-    top: 70%;
-    left: 60%;
-    animation-duration: 14s;
-  }
-  .circle:nth-child(4) {
-    top: 30%;
-    left: 80%;
-    animation-duration: 10s;
-  }
+//   /* Randomly placing circles */
+//   .circle:nth-child(1) {
+//     top: 10%;
+//     left: 20%;
+//     animation-duration: 8s;
+//   }
+//   .circle:nth-child(2) {
+//     top: 50%;
+//     left: 10%;
+//     animation-duration: 12s;
+//   }
+//   .circle:nth-child(3) {
+//     top: 70%;
+//     left: 60%;
+//     animation-duration: 14s;
+//   }
+//   .circle:nth-child(4) {
+//     top: 30%;
+//     left: 80%;
+//     animation-duration: 10s;
+//   }

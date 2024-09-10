@@ -1,18 +1,18 @@
-document.getElementById('explore-btn').addEventListener('click', function() {
-  const exploreScreen = document.getElementById('explore-screen');
-  exploreScreen.style.animation = 'slideUp 1s forwards';
+// document.getElementById('explore-btn').addEventListener('click', function() {
+//   const exploreScreen = document.getElementById('explore-screen');
+//   exploreScreen.style.animation = 'slideUp 1s forwards';
 
  
-  setTimeout(() => {
-    exploreScreen.style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
+//   setTimeout(() => {
+//     exploreScreen.style.display = 'none';
+//     document.getElementById('main-content').style.display = 'block';
 
-    const audio = document.getElementById('bg-audio');
-    audio.play().catch(error => {
-      console.error('Autoplay was prevented:', error);
-    });
-  }, 1000);  // Wait for the slide-up animation to finish
-});
+//     const audio = document.getElementById('bg-audio');
+//     audio.play().catch(error => {
+//       console.error('Autoplay was prevented:', error);
+//     });
+//   }, 1000);  // Wait for the slide-up animation to finish
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
