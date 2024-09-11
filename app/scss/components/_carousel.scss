@@ -72,15 +72,3 @@
       transform: translate3d(-2000px, 0, 0); /* Move left by the width of 4 images (4 * 500px) */
     }
   }
-
-  .scrolling-text {
-    position: absolute;
-    display: none;
-    bottom: 0;
-    left: 0;
-    background-color: var(--yellow);
-    color: var(--black);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 10;
-  }

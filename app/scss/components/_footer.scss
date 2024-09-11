@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 .footer {
     width: 100%;
     position: relative;
@@ -10,13 +12,56 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+            overflow: hidden;
+            padding: 0;
+
+            .scrolling-text {
+                font-family: u.$header-font;
+                font-size: 4rem;
+                // position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0;
+                background-color: var(--yellow);
+                max-height: 5rem;
+                width: 100%;
+                color: var(--black);
+                text-align: center;
+                z-index: 10;
+            
+                ul {
+                    display: flex;
+                    gap: 1rem;
+                    width: calc(320px * 8);
+                    animation: scrollText 20s linear infinite;
+    
+                    li {
+                        max-width: 320px;
+                        width: 100%;
+                        object-fit: contain;
+                    }
+                }
+            }
 
         .footer-socials {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
+            gap: 1rem;
+
+            .email {
+                font-size: 1.1rem;
+                color: var(--black);
+                font-weight: bold;
+                transition: .3s ease-in-out;
+                text-decoration: underline;
+
+                &:hover {
+                    color: var(--white);
+                }
+            }
         }
 
         .disclaimer-text {

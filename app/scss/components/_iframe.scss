@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 .iframe {
     width: 100%;
     margin-top: 2rem;   
@@ -8,9 +10,47 @@
         border-radius: 0 0 40px 40px;
         position: relative;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        padding: 2rem 1rem;
+        gap: 1rem;
+            overflow: hidden;
+            padding: 0;
+            white-space: nowrap;
+            width: 100%;
+
+            .scrollText {
+                display: inline-block;
+                animation: scrollLeft 25s linear infinite;
+            }
+
+        .scrolling-text {
+            font-family: u.$header-font;
+            font-size: 4rem;
+            // position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            background-color: var(--yellow);
+            max-height: 5rem;
+            width: 100%;
+            color: var(--black);
+            text-align: center;
+            z-index: 10;
+        
+            ul {
+                display: flex;
+                gap: 1rem;
+                width: calc(320px * 8);
+                animation: scrollText 25s linear infinite;
+
+                li {
+                    max-width: 320px;
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+          }
 
         iframe {
             max-width: 50rem;
@@ -19,6 +59,25 @@
             border: 1px solid white;
             border-radius: 40px;
             overflow: hidden;
+            // padding-top: 1rem;
         }
     }
 }
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollText {
+    0% {
+      transform: translate3d(0, 0, 0); /* Start at the first slide */
+    }
+    100% {
+      transform: translate3d(-520px, 0, 0); /* Move left by the width of 4 images (4 * 500px) */
+    }
+  }
