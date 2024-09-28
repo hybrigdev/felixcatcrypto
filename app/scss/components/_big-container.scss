@@ -2,8 +2,22 @@
 
 .big-container {
     // background-color: red;
-    min-height: 100vh;
+    // min-height: 100vh;
     width: 100%;
     padding: 1rem .3rem;
     border-radius: u.$border-radius;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+    }
 }

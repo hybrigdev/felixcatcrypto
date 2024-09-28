@@ -2,31 +2,24 @@
 
 .iframe {
     width: 100%;
-    margin-top: 2rem;   
 
     .container {
         min-height: 50rem;
         background: var(--iframe-bg-color);
         border-radius: 0 0 40px 40px;
-        position: relative;
+        // position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
-            overflow: hidden;
-            padding: 0;
-            white-space: nowrap;
-            width: 100%;
-
-            .scrollText {
-                display: inline-block;
-                animation: scrollLeft 25s linear infinite;
-            }
+        gap: 5rem;
+        overflow: hidden;
+        padding: 0;
+        white-space: nowrap;
+        width: 100%;
 
         .scrolling-text {
             font-family: u.$header-font;
             font-size: 4rem;
-            // position: absolute;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -36,7 +29,6 @@
             width: 100%;
             color: var(--black);
             text-align: center;
-            z-index: 10;
         
             ul {
                 display: flex;
@@ -50,16 +42,40 @@
                     object-fit: contain;
                 }
             }
-          }
+        }
 
-        iframe {
-            max-width: 50rem;
-            width: 90%;
-            min-height: 40rem;
-            border: 1px solid white;
-            border-radius: 40px;
+        // iframe {
+        //     max-width: 50rem;
+        //     width: 90%;
+        //     min-height: 40rem;
+        //     border: 1px solid white;
+        //     border-radius: 40px;
+        //     overflow: hidden;
+        //     // padding-top: 1rem;
+        // }
+
+        .jupiter-terminal {
+            padding: 20px;
+            background-color: #383f4d;
+            border: 1px solid rgb(1, 102, 1);
+            border-radius: 15px;
             overflow: hidden;
-            // padding-top: 1rem;
+            min-height: 10rem;
+            margin: 0 10px;
+
+            button {
+                background-color: #191b1f;
+                color: var(--white);
+                font-size: 1rem;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #747c8d;
+                    transition: background-color 0.3s ease;
+                }
+            }
         }
     }
 }

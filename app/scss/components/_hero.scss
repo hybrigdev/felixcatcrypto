@@ -2,16 +2,13 @@
 
 .hero {
     margin-top: 3rem;
-    // min-height: 70rem;
     height: 100%;
     width: 100%;
     
     .container {
-        border-radius: u.$border-radius;
+    border-radius: u.$border-radius;
         position: relative;
         height: 100vh;
-        // min-height: 40rem;
-        position: relative;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -26,16 +23,20 @@
             justify-content: center;
             align-items: center;
             padding: 0 1rem;
-            gap: 3rem;
+            gap: 2rem;
 
-            .container {
+            .content {
+                // background-color: rgba(230, 229, 229, 0.5);
+                // background-image: url('../../assets/images/paper-bg.png');
+                // border-radius: 40px;
+                // box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
+                // background-size: cover;
+                // background-position: center;
+                // background-blend-mode: soft-light;
+                color: var(--white);
                 text-align: center;
-                background-color: var(--white);
-                background-image: url('../../assets/images/paper-bg.png');
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8);
-    border-radius: 40px;
                 align-items: center;
-                padding: 3rem 1rem;
+                // padding: 3rem 1rem;
                 height: min-content;
                 width: 100%;
                 max-width: 600px;
@@ -43,7 +44,40 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 1.5rem;
+                gap: 1rem;
+
+                img {
+                    width: 100%;
+            }
+
+                .hero-title {
+                    font-size: clamp(5rem, 12vw, 14rem);        
+                    // text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+                    // animation: colorChange 5s infinite;
+                    animation: glow 3s ease-in-out infinite;
+                    letter-spacing: 0.1em;
+
+
+                    @keyframes glow {
+                        0% { text-shadow: 0 0 5px #ffaa4283; }
+                        50% { text-shadow: 0 0 20px #ffaa4262, 0 0 30px #ffaa4252; }
+                        100% { text-shadow: 0 0 5px #ffaa424d; }
+                      }
+
+
+                    @keyframes colorChange {
+                        0% { color: #ffffff; }
+                        50% { color: #ade969; }
+                        100% { color: #bfff6b; }
+                      }
+                      
+                }
+
+                .hero-subtitle {
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    margin: 0;
+                }
             }
         }
     }
