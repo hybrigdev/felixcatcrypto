@@ -4,23 +4,28 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 0 2rem;
+    width: 100%;
+    padding: 0 1rem;
     position: relative;
-    // bottom: 0;
-    // margin-top: 20px;
+    margin-top: 20px;
+    overflow: hidden;
 }
 
 .link-icons {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 500px;
     gap: 1rem;
+    margin-top: 20px;
 
 
     img {
-        margin-top: 20px;
-        width: 60px;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
+        max-width: 60px;
+        min-width: 40px;
+        width: 100%;
+        box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.8);
 }
 }
 
@@ -46,5 +51,5 @@
 
 
 .powered-by-sol img {
-    width: 15rem;
+    width: 100%;
 }

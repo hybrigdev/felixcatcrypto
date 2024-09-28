@@ -1,18 +1,4 @@
-// document.getElementById('explore-btn').addEventListener('click', function() {
-//   const exploreScreen = document.getElementById('explore-screen');
-//   exploreScreen.style.animation = 'slideUp 1s forwards';
-
- 
-//   setTimeout(() => {
-//     exploreScreen.style.display = 'none';
-//     document.getElementById('main-content').style.display = 'block';
-
-//     const audio = document.getElementById('bg-audio');
-//     audio.play().catch(error => {
-//       console.error('Autoplay was prevented:', error);
-//     });
-//   }, 1000);  // Wait for the slide-up animation to finish
-// });
+// Audio-play Function
 
 function playAudioOnScroll() {
   var audio = document.getElementById("bg-audio");
@@ -26,6 +12,9 @@ function playAudioOnScroll() {
 window.onscroll = function() {
   playAudioOnScroll();
 };
+
+
+// Navbar Toggle Function
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menu-toggle');
@@ -58,35 +47,9 @@ document.addEventListener('DOMContentLoaded', function() {
       link.addEventListener('click', closeNavbar);
   });
 });
-  
-// document.addEventListener("DOMContentLoaded", function () {
-//   const video = document.getElementById("hero-video");
-//   video.play();
 
-//   video.addEventListener("click", function () {
-//       if (video.play) {
-//           video.pause();
-//       } else {
-//           video.play();
-//       }
-//     });
-// });  
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const video = document.getElementById('hero-video');
-//     const muteButton = document.getElementById('mute-button');
-//     const muteIcon = document.getElementById('mute-icon');
-
-//     muteButton.addEventListener('click', function() {
-//         if (video.muted) {
-//             video.muted = false;
-//             muteIcon.textContent = '🔊'; // Unmuted icon
-//         } else {
-//             video.muted = true;
-//             muteIcon.textContent = '🔇'; // Muted icon
-//         }
-//     });
-// });
+// Copy to Clipboard Function
 
 document.getElementById('copyButton').addEventListener('click', function() {
   copyToClipboard('Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump', 'copyButton');
@@ -117,13 +80,17 @@ function copyToClipboard(textToCopy, buttonId) {
   }, 2000);
 }
 
-// window.Jupiter.init({
-//   displayMode: "integrated",
-//   integratedTargetId: "integrated-terminal",
-//   endpoint: "https://api.mainnet-beta.solana.com",
-//   formProps: {
-//     initialInputMint: "So11111111111111111111111111111111111111112",
-//     initialOutputMint: "Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump",
-//     initialSlippageBps: 5,
-//   },
-// });
+
+// Jupiter Terminal Function
+
+window.Jupiter.init({
+  displayMode: "integrated",
+  integratedTargetId: "integrated-terminal",
+  endpoint: "https://broken-multi-dawn.solana-mainnet.quiknode.pro/8f773daf77173d608dab592d20a6887c71130b58",
+  formProps: {
+  swapMode: "ExactInOrOut",
+  initialInputMint: "So11111111111111111111111111111111111111112",
+  initialOutputMint: "Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump",
+  initialSlippageBps: 50,
+  },
+});
