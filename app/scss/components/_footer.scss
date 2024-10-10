@@ -78,6 +78,17 @@
                 padding: 0 2rem;
                 font-size: 10px;
                 color: var(--copyright-color);
+
+                a {
+                    color: var(--copyright-color);
+                    text-decoration: underline;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        color: var(--black);
+                        font-weight: bold;
+                    }
+                }
             }
         }
 
