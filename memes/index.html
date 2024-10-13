@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Meme Gallery</title>
+    <title>$FLXCAT Meme Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Coiny&family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
@@ -36,9 +36,9 @@
                         <ul role="list" class="nav-links" id="primary-navigation">
                             <li><a href="../">Home</a></li>
                             <!-- <li><a href="https://pump.fun/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank">Pump.fun</a></li> -->
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#tokenomics">Tokenomics</a></li>
-                            <li><a href="#tutorial">How to Buy</a></li>
+                            <li><a href="../index.html#about">About</a></li>
+                            <li><a href="../index.html#tokenomics">Tokenomics</a></li>
+                            <li><a href="../index.html#tutorial">How to Buy</a></li>
                             <li><a href="./memes/" target="_blank">Memes</a></li>
                             <li><a href="https://sns.id/domain?domain=flxcat" target="_blank">Marketing wallet</a></li>
                             <!-- <li><a href="https://birdeye.so/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump/9yWCbkgg3yfNYmPWKUHfpBLtDixS6oUHfhFPQUeqQDs7?chain=solana">Birdeye</a></li>
@@ -64,13 +64,23 @@
         </header>
 
         <section class="meme">            
-            <div class="gallery">
-                <h1>Coming soon...</h1>
+            <div class="gallery"></div>
+
+            <!-- Modal for viewing full image -->
+            <div class="modal">
+                <div class="modal-overlay"></div>
+                <div class="modal-content">
+                    <span class="close">X</span>
+                    <a class="download" href="" download>Download</a>
+                    <img id="modal-image" src="" alt="Full-size image">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
             </div>
         </section>
 
 
-    <script src="../app/js/script.js"></script>
+    <script src="../app/js/meme.js"></script>
     
 </body>
 </html>
