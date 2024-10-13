@@ -237,3 +237,30 @@
     height: auto;
     display: block;
 }
+
+/* Style for the loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white; /* Optional: Black background */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Style to hide the content initially */
+.big-container {
+    display: none;
+}
+
+/* Video styling */
+#loading-video {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Set a max width to fit most screens */
+}

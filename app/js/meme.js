@@ -1,3 +1,42 @@
+// Navbar Toggle Function
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.querySelector('.navbar');
+    const nav = document.querySelector('nav ul');
+    const navLinks = nav.querySelectorAll('a');
+
+    function closeNavbar() {
+      menuToggle.checked = false;
+      navbar.classList.remove('active');
+      nav.classList.remove('active');
+  }
+  
+    menuToggle.addEventListener('change', function() {
+      if (this.checked) {
+        navbar.classList.add('active');
+        nav.classList.add('active');
+      } else {
+          closeNavbar();
+      }
+    });
+  
+    document.addEventListener('click', function(event) {
+      if (!navbar.contains(event.target) && !nav.contains(event.target) && !menuToggle.contains(event.target)) {
+        closeNavbar();
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeNavbar);
+  });
+});
+
+setTimeout(() => {
+    document.getElementById('loading-screen').style.display = 'none'; // Hide loading screen
+    document.querySelector('.big-container').style.display = 'block'; // Show actual content
+  }, 4000); // 4 seconds delay
+
 // Meme Gallery
 
 const imageNames = [

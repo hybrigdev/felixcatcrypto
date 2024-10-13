@@ -94,3 +94,8 @@ window.Jupiter.init({
   initialSlippageBps: 50,
   },
 });
+
+setTimeout(() => {
+  document.getElementById('loading-screen').style.display = 'none'; // Hide loading screen
+  document.querySelector('.big-container').style.display = 'block'; // Show actual content
+}, 2000); // 4 seconds delay
