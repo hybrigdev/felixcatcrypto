@@ -29,6 +29,15 @@
     </script>
 </head>
 <body>
+    <!-- Loading screen -->
+    <div id="loading-screen">
+        <video id="loading-video" autoplay muted loop>
+            <source src="../assets/videos/felix-the-cat-load.webm" type="video/webm">
+            <h3>Loading...</h3>
+        </video>
+        <h3>Loading...</h3>
+    </div>
+    
     <section id="main-content" class="big-container">
         <header>
             <div class="container navbar">
@@ -46,7 +55,7 @@
                             <li><a href="#tokenomics">Tokenomics</a></li>
                             <li><a href="#tutorial">How to Buy</a></li>
                             <li><a href="./memes/" target="_blank">Memes</a></li>
-                            <li><a href="https://sns.id/domain?domain=flxcat" target="_blank">Marketing wallet</a></li>
+                            <!-- <li><a href="https://sns.id/domain?domain=flxcat" target="_blank">Marketing wallet</a></li> -->
                             <!-- <li><a href="https://birdeye.so/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump/9yWCbkgg3yfNYmPWKUHfpBLtDixS6oUHfhFPQUeqQDs7?chain=solana">Birdeye</a></li>
                             <li><a href="https://solscan.io/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank">Solscan</a></li> -->
                             <li><a href="https://t.me/+JXd6SFxf_kVjZmFh" target="_blank">Community</a></li>
@@ -127,16 +136,17 @@
 
                     <div class="social-links">
                         <div class="link-icons big">
-                            <a href="https://x.com/felixcat1000x" target="_blank" class="link"><img src="./assets/icons/x.png" alt="" class="link-icon"></a>
-                            <a href="https://t.me/+JXd6SFxf_kVjZmFh" target="_blank" class="link"><img src="./assets/icons/telegram.png" alt="" class="link-icon"></a>
-                            <a href="https://dexscreener.com/solana/3qfacsuwyppdtpsltdcxemhqboivcpvgsw6z2aeqztxj" target="_blank" class="link"><img src="./assets/icons/dexS.png" alt="" class="link-icon"></a>
-                            <a href="https://www.dextools.io/app/en/solana/pair-explorer/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump?t=1725942438905" target="_blank" class="link"><img src="./assets/icons/dexT.png" alt="" class="link-icon"></a>
-                            <!-- <a href="https://solscan.io/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/solscan.png" alt="" class="link-icon"></a> -->
-                            <a href="https://birdeye.so/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump/9yWCbkgg3yfNYmPWKUHfpBLtDixS6oUHfhFPQUeqQDs7?chain=solana" target="_blank" class="link"><img src="./assets/icons/birdeye.png" alt="" class="link-icon"></a>
-                            <a href="https://pump.fun/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/pumpfun.png" alt="" class="link-icon"></a>
-                            <a href="https://raydium.io/swap/?inputMint=sol&outputMint=Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/raydium.png" alt="" class="link-icon"></a>
-                            <a href="https://phantom.app/" target="_blank" class="link"><img src="./assets/icons/phantom.png" alt="" class="link-icon"></a>
-                            <a href="https://solflare.com/" target="_blank" class="link"><img src="./assets/icons/solflare.png" alt="" class="link-icon"></a>
+                            <a href="https://x.com/felixcat1000x" target="_blank" class="link"><img src="./assets/icons/x.png" alt="X" class="link-icon"></a>
+                            <a href="https://t.me/+JXd6SFxf_kVjZmFh" target="_blank" class="link"><img src="./assets/icons/telegram.png" alt="Telegram" class="link-icon"></a>
+                            <a href="https://dexscreener.com/solana/3qfacsuwyppdtpsltdcxemhqboivcpvgsw6z2aeqztxj" target="_blank" class="link"><img src="./assets/icons/dexS.png" alt="Dexscreener" class="link-icon"></a>
+                            <a href="https://www.dextools.io/app/en/solana/pair-explorer/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump?t=1725942438905" target="_blank" class="link"><img src="./assets/icons/dexT.png" alt="Dextools" class="link-icon"></a>
+                            <a href="https://solscan.io/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/solscan.png" alt="Solscan" class="link-icon"></a>
+                            <a href="https://birdeye.so/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump/9yWCbkgg3yfNYmPWKUHfpBLtDixS6oUHfhFPQUeqQDs7?chain=solana" target="_blank" class="link"><img src="./assets/icons/birdeye.png" alt="Birdeye" class="link-icon"></a>
+                            <a href="https://memecoinseason.io/p/felix-the-cat" target="_blank" class="link"><img src="./assets/icons/memecoinseason.png" alt="Memecoin Season" class="link-icon"></a>
+                            <a href="https://pump.fun/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/pumpfun.png" alt="Pumpfun" class="link-icon"></a>
+                            <a href="https://raydium.io/swap/?inputMint=sol&outputMint=Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/raydium.png" alt="Raydium" class="link-icon"></a>
+                            <a href="https://phantom.app/" target="_blank" class="link"><img src="./assets/icons/phantom.png" alt="Phantom" class="link-icon"></a>
+                            <a href="https://solflare.com/" target="_blank" class="link"><img src="./assets/icons/solflare.png" alt="Solflare" class="link-icon"></a>
                         </div>
         
                         <div class="powered-by-sol">
@@ -176,8 +186,8 @@
                     <div class="content">
                         <h2 class="section-title">About $FLXCAT</h2>
                         <p class="section-subtitle">$FLXCAT on SOLANA is a tribute to the iconic <a href="https://en.wikipedia.org/wiki/Felix_the_Cat" target="_blank">Felix the Cat</a>, a cartoon character that has been around for nearly a century. It was created in 1919 by Pat Sullivan and Otto Messmer during the silent film era. An anthropomorphic young black cat with white eyes, a black body, and a giant grin, he is often considered one of the most recognized cartoon characters in history. Felix was the first fully realized recurring animal character in the history of American film animation.</p>
-                        <img src="./assets/images/about-img.png" alt="">
                     </div>
+                    <img src="./assets/images/about-img.png" alt="">
                 </div>
             </section>
 
@@ -241,8 +251,9 @@
                             <a href="https://t.me/+JXd6SFxf_kVjZmFh" target="_blank" class="link"><img src="./assets/icons/telegram.png" alt="" class="link-icon"></a>
                             <a href="https://dexscreener.com/solana/3qfacsuwyppdtpsltdcxemhqboivcpvgsw6z2aeqztxj" target="_blank" class="link"><img src="./assets/icons/dexS.png" alt="" class="link-icon"></a>
                             <a href="https://www.dextools.io/app/en/solana/pair-explorer/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump?t=1725942438905" target="_blank" class="link"><img src="./assets/icons/dexT.png" alt="" class="link-icon"></a>
-                            <!-- <a href="https://solscan.io/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/solscan.png" alt="" class="link-icon"></a> -->
+                            <a href="https://solscan.io/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/solscan.png" alt="" class="link-icon"></a>
                             <a href="https://birdeye.so/token/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump/9yWCbkgg3yfNYmPWKUHfpBLtDixS6oUHfhFPQUeqQDs7?chain=solana" target="_blank" class="link"><img src="./assets/icons/birdeye.png" alt="" class="link-icon"></a>
+                            <a href="https://memecoinseason.io/p/felix-the-cat" target="_blank" class="link"><img src="./assets/icons/memecoinseason.png" alt="" class="link-icon"></a>
                             <a href="https://pump.fun/Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/pumpfun.png" alt="" class="link-icon"></a>
                             <a href="https://raydium.io/swap/?inputMint=sol&outputMint=Gb4VP7b7huToXmLvvNy1VauGttebc4vxVp5FEKQspump" target="_blank" class="link"><img src="./assets/icons/raydium.png" alt="" class="link-icon"></a>
                             <a href="https://phantom.app/" target="_blank" class="link"><img src="./assets/icons/phantom.png" alt="" class="link-icon"></a>
