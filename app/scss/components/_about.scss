@@ -24,6 +24,7 @@
             align-items: center;
             justify-content: center;
             gap: 1.5rem;
+            z-index: 200;
 
             h2 {
                 font-size: 2.5rem;
@@ -40,13 +41,14 @@
                 }
             }
 
-            img {
-                // width: 70vw;
-                width: clamp(30rem, 70vw, 60rem);
-                position: absolute;
-                bottom: 0;
-                left: 0;
-            }
+        }
+        img {
+            // width: 70vw;
+            width: clamp(30rem, 70vw, 60rem);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 100;
         }
 
     }
