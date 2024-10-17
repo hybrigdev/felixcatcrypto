@@ -1,0 +1,266 @@
+@use '../util' as u;
+
+.meme {
+    width: 100%;
+    margin-top: 3rem;
+
+    
+    .gallery {
+        // column-count: 2;
+        // column-gap: 10px;
+        columns: 150px;
+        margin: 10px;
+
+        @include u.breakpoint('medium') {
+        columns: 200px;
+        // column-count: 3;
+        }
+
+        @include u.breakpoint('xlarge') {
+        columns: 300px;
+        // column-count: 4;
+        }
+    }
+
+    .modal-overlay {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        // background-color: blue;
+        z-index: 20;
+    }
+        
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        margin-top: 1rem;
+        justify-content: center;
+        align-items: center;
+        // background-color: rgba(0, 0, 0, 0.7);
+        z-index: 20;
+
+        @include u.breakpoint('medium') {
+            margin-top: 3rem;
+        }
+            
+        
+        .modal-content {
+        background: var(--glass-bg-color);
+        backdrop-filter: blur(30px);
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+        // background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            border-radius: 10px;
+            max-width: 700px;
+            width: fit-content;
+            height: fit-content;
+            // max-height: 500px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-direction: column-reverse;
+            z-index: inherit;
+
+            @include u.breakpoint('medium') {
+                width: 60%;
+                padding: 1rem 2rem;
+            }
+
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: white;
+                font-weight: 700;
+                padding: 10px;
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+        
+            .download {
+                // position: absolute;
+                // bottom: 10px;
+                // right: 50px;
+                background-color: var(--yellow);
+                color: var(--black);
+                font-size: 1rem;
+                font-family: u.$body-font;
+                font-weight: 700;
+                border: none;
+                border-radius: 15px;
+                padding: 1rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: var(--button-hover);
+                    transition: background-color 0.3s ease;
+                }
+            }
+        
+            img {
+                width: 100%;
+                max-width: 600px;
+                max-height: 500px;
+                object-fit: contain;
+                 border-radius: 10px;
+        }
+
+            .prev, .next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: rgba(0, 0, 0, 0.5);
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                z-index: 21;
+            }
+    
+            .prev {
+                left: 10px;
+            }
+    
+            .next {
+                right: 10px;
+            }
+
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+        
+    }
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 10px;
+    break-inside: avoid;
+}
+
+/* Image styling to maintain aspect ratio */
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Hover effect for images */
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Panel that appears on click (hidden initially) */
+.panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding: 1rem;
+    z-index: 10;
+    transform: scale(1.05);
+    display: none;
+}
+
+.view, .download-btn {
+    // position: absolute;
+    // bottom: 10px;
+    // right: 10px;
+    padding: 8px 12px;
+    background-color: #f7931e;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: u.$body-font;
+    font-weight: 500;
+}
+
+.view:hover, .download-btn:hover {
+    background-color: #e67e22;
+}
+
+/* Dark overlay on clicked image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 5; /* Underneath the panel */
+}
+
+/* Show panel and overlay when image is clicked */
+.image-container.active .panel {
+    display: flex;
+    transition: display 3s ease;
+}
+
+.image-container.active .overlay {
+    display: none;
+}
+
+
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for the loading screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white; /* Optional: Black background */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Style to hide the content initially */
+.big-container {
+    display: none;
+}
+
+/* Video styling */
+#loading-video {
+    width: 100%;
+    height: auto;
+    max-width: 200px; /* Set a max width to fit most screens */
+}
