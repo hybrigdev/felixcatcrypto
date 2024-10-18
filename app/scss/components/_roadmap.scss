@@ -1,0 +1,74 @@
+@use "../util/" as u;
+
+.roadmap {
+    background-color: var(--copyright-color);
+    // background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(20,20,20,1) 50%, rgba(0,0,0,0.6) 100%);
+    padding: 50px 20px;
+    width: 100%;
+
+    .broken-line {
+        border-left: 55px dashed grey;
+        height: 100rem;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 0);
+        z-index: 5;
+      }
+      
+
+    .roadmap-container {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        z-index: 10;
+        position: relative;
+
+        h2 {
+            color: var(--grey);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+
+        .roadmap-items {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+    
+          .roadmap-item {
+            background-color: var(--grey);
+            color: #000;
+            padding: 20px;
+            border: 2px solid var(--copyright-color);
+            border-radius: 0 25px;
+            box-shadow: 0 10px 50px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+            
+            &:hover {
+              transform: translateY(-10px);
+            }
+        
+            h3 {
+              font-size: 1.5rem;
+              margin-bottom: 15px;
+              letter-spacing: 1.5px;
+              color: var(--copyright-color);
+              
+            }
+        
+            ol {
+              font-size: 1rem;
+            //   color: #333;
+
+            li {
+                list-style: circle;
+            }
+            }
+          }
+        }
+    }  
+}
+  
