@@ -22,3 +22,38 @@ main {
         max-width: none !important;
     }
 }
+
+section {
+    animation: on-scroll ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+
+    @include u.breakpoint('large') {
+        animation-timeline: view();
+        animation-range: entry 25% cover 30%;
+    }
+}
+
+@keyframes on-scroll {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translate(-150px, 50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    
+}
